@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-char message[20] = "";
+char *message [];
 char symbol;
 int main() {
     printf("Please, enter your line\n");
