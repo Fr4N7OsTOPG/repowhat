@@ -1,2 +1,2 @@
-# repowhat
-for business only
+Repositorium
+For Basic Programming only
