@@ -1,8 +1,8 @@
-a = str(input())
-sum = 0
-for i in a:
-    sum += ord(i)
-if sum >= (len(a)-1) * ord("а") + ord("А"):
-    print("YES")
-else:
-    print("NO")
+import re
+
+txt = "Три богатыря", "проверка", "Мама", "авТо", "гриБ", 'Яблоко', 'яБлоко', 'ябЛоко', 'яблОко', 'яблоКо', 'яблокО'
+
+for x in txt:
+    c = re.findall("(^[а-я]*[А-Я][а-я]*)$", x)
+    print(*c)
+    
