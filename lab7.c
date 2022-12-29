@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 enum pastry{
     cake = 1,
@@ -9,7 +10,21 @@ enum pastry{
 
 struct square{
     float side;
+    float s;
+    float v;
+    
 };
+
+float area(struct square* sid)
+{
+    return sid->side * sid->side;
+}
+
+float volume(struct square* sid)
+{
+    return sid->side * sid->side * sid->side;
+}
+
 struct Bit_field{
     unsigned char Ready:1;
     unsigned int Low_of_toner:1;
@@ -46,11 +61,12 @@ int main(){
     printf("Enter side of the square ");
     scanf("%f", &side);
     struct square example = {side};
-    float area = pow(side, 2);
-    float volume = pow(side, 3);
+    example.s = area(&side);
+    example.v = volume(&side);
+    
 
-    printf("Area = %.3f\n", area);
-    printf("Volume of the cube, if it was = %.3f\n", volume);
+    printf("Area = %.3f\n", example.s);
+    printf("Volume of the cube, if it was = %.3f\n", example.v);
     printf("\n");
 
     printf("3\n");
