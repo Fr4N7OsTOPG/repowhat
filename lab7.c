@@ -15,12 +15,12 @@ struct square{
     
 };
 
-float area(struct square* sid)
+float area(struct square *sid)
 {
     return sid->side * sid->side;
 }
 
-float volume(struct square* sid)
+float volume(struct square *sid)
 {
     return sid->side * sid->side * sid->side;
 }
